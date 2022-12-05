@@ -26,7 +26,7 @@ public class ProductOfArrayExceptSelf {
                 answer[j] = 0;
             }
             else if (nums[j] == 0 && foundZero<=1){
-                answer[j] = product
+                answer[j] = product;
             }
             else{
                 answer[j] = product / nums[j];
