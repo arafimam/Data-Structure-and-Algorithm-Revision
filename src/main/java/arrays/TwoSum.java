@@ -4,21 +4,29 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSum {
-    public int[] twoSum(int[] nums, int target) {
-        Map<Integer,Integer> map = new HashMap<>();
-        for (int index = 0;index <nums.length; index++){
-            map.put(nums[index],index);
-        }
 
-        for (int i = 0; i < nums.length; i++) {
-            int complement = target - nums[i];
-            if (map.containsKey(complement) && map.get(complement) != i) {
-                return new int[] { i, map.get(complement) };
+    /**
+     * https://leetcode.com/problems/two-sum/
+     * @param nums
+     * @return
+     */
+    public static int[] twoSum(int[] nums,int target){
+        // map to store [values -> index]
+        Map<Integer,Integer> valueToIndexMap = new HashMap<>();
+        for (int i=0;i< nums.length;i++){
+            valueToIndexMap.put(nums[i],i);
+        }
+        for (int j=0;j< nums.length;j++){
+            int difference = target - nums[j];
+            if (valueToIndexMap.containsKey(difference)){
+                // ensure that the value is not the same element
+                if (valueToIndexMap.get(difference) != j){
+                    return new int[]{j,valueToIndexMap.get(difference)};
+                }
+
             }
         }
-        // In case there is no solution, we'll just return null
         return null;
-
     }
 
 
