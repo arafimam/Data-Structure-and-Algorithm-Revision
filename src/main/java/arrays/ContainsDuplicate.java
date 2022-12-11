@@ -6,7 +6,6 @@ import java.util.Set;
 public class ContainsDuplicate {
 
     public static boolean containsDuplicate(int[] nums) {
-
         Set<Integer> uniqueElements = new HashSet<>();
         for (int i = 0; i < nums.length; i ++){
             if (!uniqueElements.contains(nums[i])){
