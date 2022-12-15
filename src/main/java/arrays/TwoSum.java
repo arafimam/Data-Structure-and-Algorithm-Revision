@@ -5,6 +5,9 @@ import java.util.Map;
 
 public class TwoSum {
 
+    public static void main(String[] args) {
+        twoSum(new int[]{3,3},6);
+    }
     /**
      * https://leetcode.com/problems/two-sum/
      * @param nums
