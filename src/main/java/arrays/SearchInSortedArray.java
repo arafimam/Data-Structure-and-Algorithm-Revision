@@ -11,7 +11,8 @@ public class SearchInSortedArray {
             }
             else{
                 return -1;
-            }}
+            }
+        }
 
         // for not-rotated array.
         if (nums[nums.length-1]>nums[0]){
@@ -41,7 +42,6 @@ public class SearchInSortedArray {
             int midPoint = (nums.length-1)/2;
             return findTargetInNotRotatedArray(nums,target,pointOfInflection+1,nums.length);
         }
-
     }
 
     // Binary Search: O(logn)
